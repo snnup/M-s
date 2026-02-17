@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Nosso Amor Eterno 💕</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Valentina+Script&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Valentina Script', cursive;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFE4E9 50%, #FFC0CB 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 60px 50px;
+            border-radius: 40px;
+            box-shadow: 0 30px 80px rgba(255, 105, 180, 0.4);
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 182, 193, 0.6);
+            z-index: 10;
+            max-width: 95%;
+            width: 1000px;
+        }
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #FF1493;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 8px rgba(255, 105, 180, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            font-size: 1.4em;
+            color: #FF69B4;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .time-unit {
+            background: #FFB6D9;
+            padding: 35px 30px;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.25);
+            transition: all 0.3s ease;
+            position: relative;
+            min-width: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .time-unit:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.35);
+        }
+        .time-number {
+            font-size: 4em;
+            font-weight: 700;
+            color: white;
+            display: block;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .time-label {
+            font-size: 0.75em;
+            color: white;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            opacity: 0.95;
+        }
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            color: #FF1493;
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.9;
+            }
+        }
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                text-shadow: 3px 3px 8px rgba(255, 105, 180, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                text-shadow: 3px 3px 15px rgba(255, 105, 180, 0.6);
+            }
+        }
+        .big-heart {
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.08;
+            animation: heartbeat 3s infinite;
+            filter: blur(2px);
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+        }
+        .sparkle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+            box-shadow: 0 0 15px #FFB6C1, 0 0 25px #FF69B4;
+        }
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0) rotate(0deg);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1) rotate(180deg);
+            }
+        }
+        
+        /* Decoração extra ao redor do timer */
+        .timer-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .timer-decoration::before,
+        .timer-decoration::after {
+            content: '💕';
+            position: absolute;
+            font-size: 2em;
+            opacity: 0.3;
+            animation: decorationFloat 3s ease-in-out infinite;
+        }
+        
+        .timer-decoration::before {
+            left: -30px;
+            top: 50%;
+            animation-delay: 0s;
+        }
+        
+        .timer-decoration::after {
+            right: -30px;
+            top: 50%;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes decorationFloat {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            .subtitle { font-size: 1.1em; }
+            .container { padding: 40px 30px; }
+            .time-unit { 
+                min-width: 90px;
+                padding: 25px 20px; 
+            }
+            .time-number { font-size: 3em; }
+            .time-label { font-size: 0.7em; }
+            .timer { gap: 10px; }
+        }
+        
+        @media (max-width: 480px) {
+            .timer {
+                gap: 8px;
+            }
+            .time-unit {
+                min-width: 75px;
+                padding: 20px 15px;
+            }
+            .time-number { font-size: 2.5em; }
+            .time-label { font-size: 0.65em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="big-heart" style="top: 10%; left: 10%; color: #FFB6C1;">💕</div>
+    <div class="big-heart" style="top: 70%; right: 15%; color: #FF69B4;">💖</div>
+    <div class="big-heart" style="bottom: 15%; left: 20%; color: #FFC0CB;">💗</div>
+    <div class="big-heart" style="top: 40%; right: 10%; color: #FFB6C1;">💓</div>
+    
+    <div class="container">
+        <h1>💕 Feliz Mesversário! 💕</h1>
+        <p class="subtitle">Nosso amor cresce a cada segundo...</p>
+        
+        <div style="position: relative; display: inline-block;">
+            <div class="timer-decoration"></div>
+            <div class="timer">
+                <div class="time-unit">
+                    <span class="time-number" id="years">0</span>
+                    <span class="time-label">Anos</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="months">0</span>
+                    <span class="time-label">Meses</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="weeks">0</span>
+                    <span class="time-label">Semanas</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="days">0</span>
+                    <span class="time-label">Dias</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours">0</span>
+                    <span class="time-label">Horas</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes">0</span>
+                    <span class="time-label">Minutos</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds">0</span>
+                    <span class="time-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const startDate = new Date('2025-12-17T00:00:00');
+        
+        function createHearts() {
+            const heartEmojis = ['💕', '💖', '💗', '💓', '💘', '❤️', '💝'];
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.animationDuration = (8 + Math.random() * 4) + 's';
+                document.body.appendChild(heart);
+            }
+        }
+        
+        function createSparkles() {
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(sparkle);
+            }
+        }
+        
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+            
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+            
+            let months = (now.getFullYear() - startDate.getFullYear()) * 12;
+            months += now.getMonth() - startDate.getMonth();
+            if (now.getDate() < startDate.getDate()) months--;
+            
+            const weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('weeks').textContent = weeks;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        createHearts();
+        createSparkles();
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
