@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💕 Nosso Amor Eterno 💕</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Great Vibes', 'Pacifico', cursive;
+            font-family: 'Press Start 2P', cursive;
             background: linear-gradient(135deg, #FFB6C1 0%, #FFE4E9 50%, #FFC0CB 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
+            padding: 20px 0;
         }
         .container {
             text-align: center;
@@ -31,22 +33,24 @@
             width: 1000px;
         }
         h1 {
-            font-size: 3.5em;
-            font-weight: 700;
+            font-size: 2.5em;
+            font-weight: 400;
             color: #FF1493;
             margin-bottom: 15px;
             text-shadow: 3px 3px 8px rgba(255, 105, 180, 0.3);
             animation: pulse 2s ease-in-out infinite;
             letter-spacing: 2px;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.5;
         }
         .subtitle {
-            font-size: 1.4em;
+            font-size: 0.9em;
             color: #FF69B4;
             margin-bottom: 50px;
-            font-weight: 300;
+            font-weight: 400;
             letter-spacing: 1px;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.6;
         }
         .timer {
             display: flex;
@@ -74,23 +78,23 @@
             box-shadow: 0 15px 35px rgba(255, 105, 180, 0.35);
         }
         .time-number {
-            font-size: 4em;
-            font-weight: 700;
+            font-size: 3em;
+            font-weight: 400;
             color: white;
             display: block;
             line-height: 1;
             margin-bottom: 8px;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Press Start 2P', cursive;
         }
         .time-label {
-            font-size: 0.75em;
+            font-size: 0.45em;
             color: white;
             text-transform: uppercase;
             display: block;
-            font-weight: 600;
-            letter-spacing: 1.5px;
+            font-weight: 400;
+            letter-spacing: 1px;
             opacity: 0.95;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Press Start 2P', cursive;
         }
         .heart {
             position: absolute;
@@ -188,21 +192,21 @@
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .subtitle { font-size: 1em; }
+            h1 { font-size: 1.3em; line-height: 1.6; }
+            .subtitle { font-size: 0.6em; line-height: 1.6; }
             .container { padding: 30px 20px; }
             .time-unit { 
                 min-width: 70px;
                 padding: 20px 15px; 
             }
-            .time-number { font-size: 2.5em; }
-            .time-label { font-size: 0.6em; }
+            .time-number { font-size: 2em; }
+            .time-label { font-size: 0.35em; }
             .timer { gap: 8px; }
         }
         
         @media (max-width: 480px) {
-            h1 { font-size: 1.8em; }
-            .subtitle { font-size: 0.9em; }
+            h1 { font-size: 1.1em; line-height: 1.6; }
+            .subtitle { font-size: 0.5em; line-height: 1.6; }
             .container { padding: 25px 15px; }
             .timer {
                 gap: 8px;
@@ -211,8 +215,8 @@
                 min-width: 65px;
                 padding: 18px 12px;
             }
-            .time-number { font-size: 2.2em; }
-            .time-label { font-size: 0.55em; }
+            .time-number { font-size: 1.8em; }
+            .time-label { font-size: 0.3em; }
         }
     </style>
 </head>
