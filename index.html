@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💕 Nosso Amor Eterno 💕</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Valentina+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Valentina Script', cursive;
+            font-family: 'Great Vibes', 'Pacifico', cursive;
             background: linear-gradient(135deg, #FFB6C1 0%, #FFE4E9 50%, #FFC0CB 100%);
             min-height: 100vh;
             display: flex;
@@ -38,6 +38,7 @@
             text-shadow: 3px 3px 8px rgba(255, 105, 180, 0.3);
             animation: pulse 2s ease-in-out infinite;
             letter-spacing: 2px;
+            font-family: 'Pacifico', cursive;
         }
         .subtitle {
             font-size: 1.4em;
@@ -45,6 +46,7 @@
             margin-bottom: 50px;
             font-weight: 300;
             letter-spacing: 1px;
+            font-family: 'Pacifico', cursive;
         }
         .timer {
             display: flex;
@@ -78,6 +80,7 @@
             display: block;
             line-height: 1;
             margin-bottom: 8px;
+            font-family: 'Pacifico', cursive;
         }
         .time-label {
             font-size: 0.75em;
@@ -87,6 +90,7 @@
             font-weight: 600;
             letter-spacing: 1.5px;
             opacity: 0.95;
+            font-family: 'Pacifico', cursive;
         }
         .heart {
             position: absolute;
@@ -184,28 +188,31 @@
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            .subtitle { font-size: 1.1em; }
-            .container { padding: 40px 30px; }
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1em; }
+            .container { padding: 30px 20px; }
             .time-unit { 
-                min-width: 90px;
-                padding: 25px 20px; 
+                min-width: 70px;
+                padding: 20px 15px; 
             }
-            .time-number { font-size: 3em; }
-            .time-label { font-size: 0.7em; }
-            .timer { gap: 10px; }
+            .time-number { font-size: 2.5em; }
+            .time-label { font-size: 0.6em; }
+            .timer { gap: 8px; }
         }
         
         @media (max-width: 480px) {
+            h1 { font-size: 1.8em; }
+            .subtitle { font-size: 0.9em; }
+            .container { padding: 25px 15px; }
             .timer {
                 gap: 8px;
             }
             .time-unit {
-                min-width: 75px;
-                padding: 20px 15px;
+                min-width: 65px;
+                padding: 18px 12px;
             }
-            .time-number { font-size: 2.5em; }
-            .time-label { font-size: 0.65em; }
+            .time-number { font-size: 2.2em; }
+            .time-label { font-size: 0.55em; }
         }
     </style>
 </head>
